@@ -1,0 +1,21 @@
+body {
+
+	font-family: 'Open Sans', sans-serif;;
+	font-size: 16px;
+	background-color: black;
+}
+
+#root {
+	width: 98%;
+	margin: 0 auto;
+}
+
+header {
+	margin: 5px 0;
+	display: inline-flex;
+	justify-content: flex-end;
+}
+
+main{
+	text-align: center;
+}
