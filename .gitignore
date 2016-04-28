@@ -1,6 +1,5 @@
 DS_Store
 *.log
 *.pdf
-build/
 node_modules/
 
