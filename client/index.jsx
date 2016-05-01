@@ -7,8 +7,8 @@ const MediaQuery = require('react-responsive');
 
 require('font-awesome/css/font-awesome.css')
 require('normalize-css');
-require(__dirname + "/css/base.css");
-require(__dirname + "/css/modules.css");
+
+require(__dirname + "/sass/main.scss");
 
 var logo = document.createElement('img');
 logo.src = require(__dirname + "/imgs/siff-x-logo.png");

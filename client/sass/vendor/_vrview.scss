@@ -1,0 +1,47 @@
+/*Vr view styling*/
+
+#title {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  font-size: 3em;
+  font-family: 'Dosis';
+  opacity: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin: 0 0.5rem;
+}
+
+#title.hidden {
+  opacity: 0;
+}
+
+canvas {
+  cursor: -webkit-grab;
+}
+canvas:active {
+  cursor: -webkit-grabbing;
+}
+
+iframe { border: 0; }
+
+
+/* MOBILE */
+@media screen and (max-width: 600px) {
+  iframe {
+    height: 240px;
+  }
+}
+/* DESKTOP */
+@media screen and (min-width: 600px) {
+  iframe {
+    height: 400px;
+    width: 100%;
+    margin: 1rem auto;
+    display: block;
+  }
+}

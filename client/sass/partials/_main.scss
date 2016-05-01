@@ -1,0 +1,41 @@
+/*h2 and p settings modified for screen size*/
+
+h2, p {
+	margin: 30px 5%;
+}
+
+h2 {
+	font-weight: bold;
+	font-size: 2.5em;
+	letter-spacing: 5px;
+
+}
+
+p {
+	font-size: 1.75em;
+	font-weight:lighter;
+	color: white;
+}
+
+@media screen and (max-width: 760px) {
+	h2 {
+		font-size: 2em;
+	}
+
+	p {
+		font-size: 1.25em;
+		font-weight:lighter;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	h2 {
+		font-size: 1.5em;
+
+	}
+
+	p {
+		font-size: 1em;
+		font-weight:lighter;
+	}
+}
