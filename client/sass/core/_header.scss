@@ -1,0 +1,30 @@
+header {
+	display: flex;
+	justify-content: center;
+	margin-top: 25px;
+	height: 25px;
+	text-align: center;
+}
+
+#logo {
+	background-image: url(./../imgs/siff-x.png) no-repeat;
+	display: inline-block;
+	width: 250px;
+	@media screen and (max-width: 500px) {
+		width: 150px
+	}
+}
+
+/*Buy Ticket Links and Badge*/
+#badgeContainer {
+	display: flex;
+	justify-content: flex-end;
+}
+
+#pass-img {
+	height: 60px;
+	width: 60px;
+	margin-right: 10px;
+	position: relative;
+	bottom: 10px;
+}

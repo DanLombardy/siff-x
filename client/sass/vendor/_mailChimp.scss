@@ -1,0 +1,26 @@
+@import "modules/colors";
+
+#anti-bot-input {
+	position: absolute;
+	left: -5000px;
+}
+
+#mce-EMAIL {
+	width: 100%;
+	background-color: $secondary;
+	margin-bottom: 50px;
+}
+
+#mc-embedded-subscribe {
+	background-color: rgba(0, 0, 0, .2);
+	color: $secondary;
+	border: 2px solid $secondary;
+	width: 20%;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $primary;
+		color: black;
+		border: 2px solid $primary;
+	}
+}

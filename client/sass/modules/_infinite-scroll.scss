@@ -1,0 +1,35 @@
+/*h2 and p settings modified for screen size*/
+#infinite-scroll {
+	margin-top: 50px;
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+
+	p {
+		margin: 20px 5% 100px 5%;
+
+	}
+
+	@media screen and (max-width: 760px) {
+		h2 {
+			font-size: 2em;
+		}
+
+		p {
+			font-size: 1.25em;
+			font-weight:lighter;
+		}
+	}
+
+	@media screen and (max-width: 425px) {
+		h2 {
+			font-size: 1.5em;
+
+		}
+
+		p {
+			font-size: 1em;
+			font-weight:lighter;
+		}
+	}
+}

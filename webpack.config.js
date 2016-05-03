@@ -4,31 +4,39 @@ const TARGET = process.env.npm_lifecycle_event;
 const webpack = require('webpack');
 
 const PATHS = {
-  app: path.join(__dirname, 'client'),
-  build: path.join(__dirname, 'build')
+	app: path.join(__dirname, 'client'),
+	build: path.join(__dirname, 'build')
 };
 
 const common = {
-  entry: {
+	entry: {
     app: PATHS.app
   },
-  resolve: {
+	resolve: {
     extensions: ['', '.js', '.jsx']
   },
-  output: {
+	output: {
     path: PATHS.build,
     filename: 'bundle.js'
   },
-  module: {
+	module: {
     loaders: [
       {
         test: /\.css$/,
         loaders: ['style', 'css'],
-// Include accepts either a path or an array of paths.
       },
+			{
+        test: /\.scss$/,
+        loaders: ["style", "css", "sass"]
+      },
+			{
+				test   : /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+				loader : 'file-loader'
+			},
       {
         test: /\.jsx?$/,
         loaders: ['babel?cacheDirectory'],
+// Include accepts either a path or an array of paths.
         include: PATHS.app
       },
       {
@@ -53,7 +61,7 @@ const common = {
 
 //Default configuration
 if(TARGET === 'start' || !TARGET){
-  module.exports = merge(common, {
+	module.exports = merge(common, {
     devtool: 'eval-source-map',
     devServer: {
       contentBase: PATHS.build,
