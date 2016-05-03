@@ -1,0 +1,82 @@
+/* Hero Img and logos for initial splash*/
+
+#hero {
+	text-align: center;
+}
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 40%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#splash {
+	display: flex;
+	justify-content: space-between;
+	@include vertical-align();
+}
+
+
+
+
+#main-logo {
+	height: 300px;
+	padding-right: 50px;
+}
+
+@media screen and (max-height: 600px) {
+	#hero {
+		margin-top: 40px;
+	}
+
+	#main-logo{
+		height: 250px;
+	}
+
+
+}
+
+#date {
+	height: 65px;
+	margin-top: 125px;
+	margin-left: 25px;
+}
+
+#location {
+	height: 125px;
+	margin-top: 100px;
+	margin-right: 25px;
+}
+
+@media screen and (max-width: 550px) {
+	#main-logo {
+		width: 225px;
+		padding-right: 0;
+	}
+	#date {
+		margin-left: 15px;
+	}
+}
+
+@media (max-height: 450px) and (orientation: landscape ){
+	#main-logo{
+		height: 200px;
+		padding-right: 0px;
+	}
+	#hero {
+		margin-top: 5%;
+	}
+	#date {
+		height: 50px;
+		margin-top: 75px;
+		margin-left: 50px;
+	}
+
+	#location {
+		height: 100px;
+		margin-top: 50px;
+		margin-right: 50px;
+	}
+}

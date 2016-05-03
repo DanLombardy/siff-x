@@ -1,0 +1,35 @@
+@import "modules/colors";
+
+body{
+  font-family: 'Futura', Arial, sans-serif;
+	color: $secondary;
+	font-weight: lighter;
+}
+
+html {
+  background: url(./../imgs/background-image.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+main {
+	text-align: center;
+	margin-bottom: 50px;
+
+}
+
+h1 {
+	font-size: 2.5em;
+}
+
+h2 {
+	font-size: 1.5em;
+}
+
+p {
+	font-size: 1.25em;
+	font-weight:lighter;
+	color: $secondary;
+}

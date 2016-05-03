@@ -8,8 +8,10 @@ const wordPressPosts = require(__dirname + "/../server-lib/wordpress-Posts.js")
 const dataRouter = module.exports = exports = express.Router();
 
 dataRouter.get('/posts', (req, res) => {
+	console.log("i got hit");
 	wordPressPosts((posts) => {
-
+		console.log("here are the posts");
+		console.log(posts);
 	let array = posts.map(function(post){
 		let obj = {
 			content: post.content,
