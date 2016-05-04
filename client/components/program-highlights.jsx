@@ -21,6 +21,7 @@ module.exports = React.createClass({
 
 		return (
 			<section id="program-highlights">
+
 				<a href="#top"></a>
 				<div className='quarterCol tablet-tenth-col inline'></div>
 				<div className='halfCol tablet-eighty-col inline'>

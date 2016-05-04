@@ -2,10 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>VR View - video example</title>
+    <title>SIFF-X Festival June 2-5</title>
     <meta name=viewport content="width=device-width, initial-scale=1">
   </head>
-	
+  <script type="text/javascript">
+      function test(el){
+          console.log("fucntion called2", el.props.children);
+          var mathnshit = document.body.scrollHeight-200;
+          console.log("tryin to drop ", mathnshit);
+          if(el.props.children=="program highlights"){
+              window.scrollTo(0,mathnshit);
+
+          }
+
+          else if(el.props.children=="contact")
+              window.scrollTo(0,document.body.scrollHeight);
+      }
+  </script>
   <body>
 		<section id="root">
 
