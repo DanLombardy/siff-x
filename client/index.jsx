@@ -16,12 +16,10 @@ require(__dirname + "/sass/entry.scss");
 render((
   <Router history={browserHistory}>
     <Route path="/" component={ App }>
-			{/*
-				Dave: Remove brackets and add this element to use the scroll:
-				<IndexRoute component={ InfiniteScroll }/>
-			*/}
-			<Route path="/contact" component={ Contact }/>
+
 			<Route path="/program-highlights" component={ ProgramHighlights }/>
+			<Route path="/contact"  component={ Contact }/>
+
 		</Route>
   </Router>
 ), document.getElementById('root'))

@@ -103,13 +103,10 @@ module.exports = React.createClass({
 						<div className='halfCol tablet-eighty-col'>
 							<nav id="fixed-nav">
 								<ul>
-									<li><IndexLink to="/" activeStyle={{ color: '#00F1AE' }}>home</IndexLink></li>
+									<li><NavLink to="/program-highlights#top">program highlights</NavLink></li>
 
 									<li><p className="dash">-</p></li>
-									<li><NavLink to="/program-highlights">program highlights</NavLink></li>
-
-									<li><p className="dash">-</p></li>
-									<li><NavLink to="/contact">contact</NavLink></li>
+									<li><NavLink to="/contact#top">contact</NavLink></li>
 								</ul>
 							</nav>
 						</div>
