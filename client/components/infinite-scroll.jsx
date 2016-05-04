@@ -23,11 +23,11 @@ module.exports = React.createClass({
 		return (
 			<section id="infinite-scroll">
 
-				<div className='quarterCol'></div>
-				<div className='halfCol'>
+				<div className='quarterCol tablet-tenth-col'></div>
+				<div className='halfCol tablet-eighty-col'>
 					<Posts posts={this.state.posts}/>
 				</div>
-				<div className='quarterCol'></div>
+				<div className='quarterCol tablet-tenth-col'></div>
 			</section>
 		)
 	}

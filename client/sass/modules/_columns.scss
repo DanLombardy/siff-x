@@ -1,3 +1,5 @@
+//desktop
+
 .thirdCol {
 	width: 33%;
 }
@@ -8,6 +10,26 @@
 
 .quarterCol {
 	width: 25%;
+}
+
+//tablet
+
+@media screen and (max-width: 600px) {
+	.tablet-eighty-col {
+		width: 80%;
+	}
+
+	.tablet-tenth-col{
+		width: 10%;
+	}
+
+
+}
+
+.stack {
+	display: block;
+
+
 }
 
 .inline {

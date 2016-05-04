@@ -60,7 +60,7 @@
 	}
 }
 
-@media (max-height: 450px) and (orientation: landscape ){
+@media screen and (max-height: 450px) and (orientation: landscape ){
 	#main-logo{
 		height: 200px;
 		padding-right: 0px;
