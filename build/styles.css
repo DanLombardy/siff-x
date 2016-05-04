@@ -1,0 +1,457 @@
+@font-face {
+  font-family: 'Futura';
+  src: url(4a37b2a3f3b6c0164dad116929c7a699.eot?#iefix) format("embedded-opentype"), url(eb7e1929c4c6ac65410b37380a5f02cb.woff) format("woff"), url(53b07ef968786f6f09d9330b627afb1e.ttf) format("truetype"); }
+
+body {
+  font-family: 'Futura', Arial, sans-serif;
+  color: #F6ECDA;
+  font-weight: lighter;
+  max-width: 1400px; }
+
+html {
+  background: url(319e6143d2d0ace8da69bb8963803a44.jpg) no-repeat center center fixed;
+  background-size: cover; }
+
+main {
+  text-align: center;
+  width: 100vw;
+  height: 1000px; }
+
+h1 {
+  font-size: 2.5em; }
+
+h2 {
+  font-size: 1.5em; }
+  @media screen and (max-width: 550px) {
+    h2 {
+      font-size: 1.25em; } }
+
+p {
+  font-size: 1.25em;
+  font-weight: lighter;
+  color: #F6ECDA; }
+  @media screen and (max-width: 550px) {
+    p {
+      font-size: 1em; } }
+
+header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 25px;
+  height: 25px;
+  text-align: center; }
+
+#logo {
+  background-image: url(ec6df1ebbc897eb35918ef366c1d4385.png) no-repeat;
+  display: inline-block;
+  width: 250px; }
+  @media screen and (max-width: 500px) {
+    #logo {
+      width: 150px; } }
+
+/*Buy Ticket Links and Badge*/
+#badgeContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+
+#pass-img {
+  height: 60px;
+  width: 60px;
+  margin-right: 10px;
+  position: relative;
+  bottom: 10px; }
+
+/* Hero Img and logos for initial splash*/
+#hero {
+  text-align: center;
+  min-height: 500px;
+  height: 100vh;
+  width: 100vw; }
+
+#splash {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  top: 40%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+#main-logo {
+  height: 300px;
+  padding-right: 50px; }
+
+@media screen and (max-height: 600px) {
+  #hero {
+    margin-top: 40px; }
+  #main-logo {
+    height: 250px; } }
+
+#date {
+  height: 65px;
+  margin-top: 125px;
+  margin-left: 25px; }
+
+#location {
+  height: 125px;
+  margin-top: 100px;
+  margin-right: 25px; }
+
+@media screen and (max-width: 550px) {
+  #main-logo {
+    width: 225px;
+    padding-right: 0; }
+  #date {
+    margin-left: 15px; } }
+
+@media screen and (max-height: 450px) and (orientation: landscape) {
+  #main-logo {
+    height: 200px;
+    padding-right: 0px; }
+  #hero {
+    margin-top: 5%; }
+  #date {
+    height: 50px;
+    margin-top: 75px;
+    margin-left: 50px; }
+  #location {
+    height: 100px;
+    margin-top: 50px;
+    margin-right: 50px; } }
+
+.thirdCol {
+  width: 33%; }
+
+.halfCol {
+  width: 50%; }
+
+.quarterCol {
+  width: 25%; }
+
+@media screen and (max-width: 600px) {
+  .tablet-eighty-col {
+    width: 80%; }
+  .tablet-tenth-col {
+    width: 10%; } }
+
+.stack {
+  display: block; }
+
+.inline {
+  display: inline-block; }
+
+/*Scroll then fixed Nav Container for Desktop */
+#nav-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.nav-initial {
+  bottom: 0;
+  position: absolute; }
+
+.nav-basic {
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 100%; }
+
+.uppper {
+  position: relative;
+  top: 0; }
+
+#fixed-nav ul {
+  margin: 0;
+  padding: 0; }
+  @media screen and (max-width: 600px) {
+    #fixed-nav ul {
+      margin-right: 10px; } }
+  #fixed-nav ul li {
+    display: inline-block;
+    height: 2em; }
+    #fixed-nav ul li:nth-child(n+2) {
+      margin-left: 15px; }
+      @media screen and (max-width: 750px) {
+        #fixed-nav ul li:nth-child(n+2) {
+          margin-left: 5px; } }
+      @media screen and (max-width: 650px) {
+        #fixed-nav ul li:nth-child(n+2) {
+          margin-left: 1px; } }
+      @media screen and (max-width: 665px) {
+        #fixed-nav ul li:nth-child(n+2) {
+          margin-top: 0px; } }
+    #fixed-nav ul li a {
+      text-decoration: none;
+      color: #F6ECDA;
+      padding: 5px;
+      font-weight: lighter;
+      font-size: 1.25em;
+      outline: 0; }
+      @media screen and (max-width: 850px) {
+        #fixed-nav ul li a {
+          font-size: 1em; } }
+
+@media screen and (max-width: 600px) {
+  .tablet-align-right {
+    text-align: right; } }
+
+.fixed-position {
+  position: fixed;
+  top: 0; }
+
+.dash {
+  display: inline-block; }
+
+#logo-nav {
+  background-image: url(ec6df1ebbc897eb35918ef366c1d4385.png) no-repeat;
+  display: inline-block;
+  width: 100%;
+  max-width: 250px;
+  margin-top: 15px;
+  min-height: 25px; }
+  @media screen and (max-width: 900px) {
+    #logo-nav {
+      width: 175px; } }
+  @media screen and (max-width: 800px) {
+    #logo-nav {
+      width: 150px; } }
+  @media screen and (max-width: 700px) {
+    #logo-nav {
+      width: 100%;
+      min-width: 100px; } }
+  @media screen and (max-width: 600px) {
+    #logo-nav {
+      margin-left: 10px; } }
+
+.img-nav {
+  visibility: hidden; }
+
+@media screen and (max-width: 550px) {
+  .tablet-display-none {
+    display: none !important; } }
+
+/*Buy Ticket Links and Badge*/
+#badgeContainer-nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 15px; }
+
+#pass-img-nav {
+  height: 60px;
+  width: 60px;
+  margin-right: 15px;
+  position: relative;
+  bottom: 10px; }
+
+/*h2 and p settings modified for screen size*/
+#infinite-scroll {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  text-align: center; }
+  #infinite-scroll p {
+    margin: 20px 5% 100px 5%; }
+  @media screen and (max-width: 760px) {
+    #infinite-scroll h2 {
+      font-size: 2em; }
+    #infinite-scroll p {
+      font-size: 1.25em;
+      font-weight: lighter; } }
+  @media screen and (max-width: 425px) {
+    #infinite-scroll h2 {
+      font-size: 1.5em; }
+    #infinite-scroll p {
+      font-size: 1em;
+      font-weight: lighter; } }
+
+#program-highlights {
+  text-align: center;
+  margin-bottom: 50px; }
+  #program-highlights h1 {
+    color: #00F1AE; }
+  #program-highlights h2 {
+    font-size: 1.5em; }
+  #program-highlights p {
+    margin-bottom: 100px; }
+  #program-highlights a {
+    text-decoration: none;
+    color: #00F1AE;
+    font-size: 1.75em; }
+    #program-highlights a:hover {
+      color: #F6ECDA; }
+  #program-highlights img {
+    width: 100%; }
+
+#contact {
+  text-align: center;
+  height: 500px;
+  margin: 200px 0 50px 0; }
+
+/*Vr view styling*/
+#title {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  font-size: 3em;
+  font-family: 'Dosis';
+  opacity: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin: 0 0.5rem; }
+
+#title.hidden {
+  opacity: 0; }
+
+canvas {
+  cursor: -webkit-grab; }
+
+canvas:active {
+  cursor: -webkit-grabbing; }
+
+iframe {
+  border: 0; }
+
+/* MOBILE */
+@media screen and (max-width: 600px) {
+  iframe {
+    height: 240px; } }
+
+/* DESKTOP */
+@media screen and (min-width: 600px) {
+  iframe {
+    height: 400px;
+    margin: 1rem auto;
+    display: block;
+    width: 100%; } }
+
+/* Burger Menu Styles for Burger and Header */
+/*DESKTOP Header on burger off*/
+@media screen and (min-width: 1100px) {
+  .bm-burger-button {
+    display: none; } }
+
+/* General hamburger sidebar styles */
+.bm-menu {
+  background: white;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+  box-shadow: 10px 5px 5px black;
+  top: 0;
+  text-align: center; }
+
+.bm-menu-wrap {
+  width: 750px; }
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+  height: 5px; }
+
+.bm-burger-button {
+  position: absolute;
+  top: 20px;
+  right: 5%;
+  width: 10%;
+  max-width: 75px;
+  height: 50px; }
+
+.bm-burger-button:hover {
+  color: gray; }
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%; }
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  left: 10px;
+  cursor: pointer; }
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: black; }
+
+.bm-menu a {
+  color: black;
+  text-decoration: none;
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 60px;
+  letter-spacing: 10px; }
+
+.bm-menu a:hover {
+  color: gray; }
+
+.bm-menu a:focus {
+  color: gray; }
+
+@media screen and (max-width: 500px) {
+  .bm-menu a {
+    font-size: 1.25em;
+    letter-spacing: 5px; } }
+
+#anti-bot-input {
+  position: absolute;
+  left: -5000px; }
+
+#mce-EMAIL {
+  width: 100%;
+  background-color: #F6ECDA;
+  margin-bottom: 50px; }
+
+#mc-embedded-subscribe {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #F6ECDA;
+  border: 2px solid #F6ECDA;
+  width: 20%;
+  min-width: 150px;
+  cursor: pointer; }
+  #mc-embedded-subscribe:hover {
+    background-color: #00F1AE;
+    color: black;
+    border: 2px solid #00F1AE; }
