@@ -12,10 +12,14 @@ require('normalize-css');
 require(__dirname + "/sass/entry.scss");
 
 
+
 render((
   <Router history={browserHistory}>
     <Route path="/" component={ App }>
-			<IndexRoute component={ InfiniteScroll }/>
+			{/*
+				Dave: Remove brackets and add this element to use the scroll:
+				<IndexRoute component={ InfiniteScroll }/>
+			*/}
 			<Route path="/contact" component={ Contact }/>
 			<Route path="/program-highlights" component={ ProgramHighlights }/>
 		</Route>

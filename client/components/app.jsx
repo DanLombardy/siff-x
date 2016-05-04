@@ -31,6 +31,7 @@ module.exports = React.createClass({
 	componentDidMount: function() {
 	 var hero = document.getElementById('hero'),
       nav = document.getElementById("nav-container"),
+			navList = document.getElementById("fixed-nav"),
 			navLogo = document.getElementById('logo-nav'),
 			navBadge = document.getElementById('badgeContainer-nav'),
       viewportHeight = Math.max(window.innerHeight || 0),
@@ -43,14 +44,23 @@ module.exports = React.createClass({
 
         if (navOffsetTop < fromTop) {
             nav.classList.add('fixed-position');
+						navBadge.classList.add('tablet-display-none');
+						navList.classList.add('tablet-align-right');
 
 						navLogo.classList.remove('img-nav');
 						navBadge.classList.remove('img-nav');
+						navBadge.classList.remove('tablet-tenth-col')
+
         } else {
             nav.classList.remove('fixed-position');
+						navBadge.classList.remove('tablet-display-none');
+						navList.classList.remove('tablet-align-right');
+
 
 						navLogo.classList.add('img-nav');
 						navBadge.classList.add('img-nav');
+						navBadge.classList.add('tablet-tenth-col')
+
         }
       }
 
@@ -87,10 +97,10 @@ module.exports = React.createClass({
 					</div>
 
 					<section id="nav-container" className='nav-basic nav-initial'>
-						<div className='quarterCol'>
+						<div className='quarterCol tablet-tenth-col'>
 							<img id="logo-nav" className='img-nav' src={logo.src } />
 						</div>
-						<div className='halfCol'>
+						<div className='halfCol tablet-eighty-col'>
 							<nav id="fixed-nav">
 								<ul>
 									<li><IndexLink to="/" activeStyle={{ color: '#00F1AE' }}>home</IndexLink></li>
@@ -103,9 +113,9 @@ module.exports = React.createClass({
 								</ul>
 							</nav>
 						</div>
-						<div className='quarterCol img-nav' id='badgeContainer-nav'>
+						<div className='quarterCol img-nav tablet-tenth-col' id='badgeContainer-nav'>
 							<a href="http://myaccount.siff.net/shop/passes.aspx?PID=1464">
-								<img id="pass-img" src={buyPass.src} />
+								<img id="pass-img-nav" src={buyPass.src} />
 							</a>
 						</div>
 

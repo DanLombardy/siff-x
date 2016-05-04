@@ -22,8 +22,8 @@ module.exports = React.createClass({
 		return (
 			<section id="program-highlights">
 				<a href="#program-highlights"></a>
-				<div className='quarterCol inline'></div>
-				<div className='halfCol inline'>
+				<div className='quarterCol tablet-tenth-col inline'></div>
+				<div className='halfCol tablet-eighty-col inline'>
 					<h1>PROGRAM HIGHLIGHTS</h1>
 
 					<div>
@@ -109,7 +109,7 @@ module.exports = React.createClass({
 					</div>
 					<a href='http://myaccount.siff.net/shop/passes.aspx?PID=1464'>BUY YOUR PASS HERE </a>
 				</div>
-				<div className='quarterCol inline'></div>
+				<div className='quarterCol tablet-tenth-col inline'></div>
 
 			</section>
 		)
