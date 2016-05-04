@@ -3,6 +3,8 @@
 #hero {
 	text-align: center;
 	min-height: 500px;
+	height: 100vh;
+	width: 100vw;
 }
 
 @mixin vertical-align($position: relative) {

@@ -3,6 +3,10 @@ const merge = require('webpack-merge');
 const TARGET = process.env.npm_lifecycle_event;
 const webpack = require('webpack');
 
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+const precss = require('precss');
+const autoprefixer = require('autoprefixer');
+
 const PATHS = {
 	app: path.join(__dirname, 'client'),
 	build: path.join(__dirname, 'build')
@@ -27,7 +31,7 @@ const common = {
       },
 			{
         test: /\.scss$/,
-        loaders: ["style", "css", "sass"]
+				loader: ExtractTextPlugin.extract('style-loader', ['css-loader', 'postcss-loader', 'sass-loader'])
       },
 			{
 				test   : /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
@@ -56,7 +60,18 @@ const common = {
 				}
 
     ]
-  }
+  },
+	postcss: function() {
+    return [autoprefixer, precss];
+  },
+
+  sassLoader: {
+    includePaths: [path.join(__dirname, 'scss')]
+  },
+
+  plugins: [
+    new ExtractTextPlugin('styles.css')
+  ]
 };
 
 //Default configuration

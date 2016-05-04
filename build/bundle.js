@@ -283,8 +283,8 @@
 /* 4 */
 /***/ function(module, exports) {
 
-	'use strict';
 	/* eslint-disable no-unused-vars */
+	'use strict';
 	var hasOwnProperty = Object.prototype.hasOwnProperty;
 	var propIsEnumerable = Object.prototype.propertyIsEnumerable;
 
@@ -296,51 +296,7 @@
 		return Object(val);
 	}
 
-	function shouldUseNative() {
-		try {
-			if (!Object.assign) {
-				return false;
-			}
-
-			// Detect buggy property enumeration order in older V8 versions.
-
-			// https://bugs.chromium.org/p/v8/issues/detail?id=4118
-			var test1 = new String('abc');  // eslint-disable-line
-			test1[5] = 'de';
-			if (Object.getOwnPropertyNames(test1)[0] === '5') {
-				return false;
-			}
-
-			// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-			var test2 = {};
-			for (var i = 0; i < 10; i++) {
-				test2['_' + String.fromCharCode(i)] = i;
-			}
-			var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
-				return test2[n];
-			});
-			if (order2.join('') !== '0123456789') {
-				return false;
-			}
-
-			// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-			var test3 = {};
-			'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
-				test3[letter] = letter;
-			});
-			if (Object.keys(Object.assign({}, test3)).join('') !==
-					'abcdefghijklmnopqrst') {
-				return false;
-			}
-
-			return true;
-		} catch (e) {
-			// We don't expect any of the above to throw, but better to be safe.
-			return false;
-		}
-	}
-
-	module.exports = shouldUseNative() ? Object.assign : function (target, source) {
+	module.exports = Object.assign || function (target, source) {
 		var from;
 		var to = toObject(target);
 		var symbols;
@@ -25716,16 +25672,6 @@
 			    viewportHeight = Math.max(window.innerHeight || 0),
 			    navOffsetTop = nav.offsetTop;
 
-			/*
-	  *
-	  * Just puttin all the CSS shit here because I don't know what convention is in REACT
-	  * */
-			hero.style.height = viewportHeight + 'px';
-			hero.style.width = "100vw";
-
-			hero.parentNode.parentNode.parentNode.style.width = "100vw";
-			hero.parentNode.parentNode.parentNode.style.height = "1000px";
-
 			var hasScrolled = function hasScrolled() {
 				var fromTop = document.body.scrollTop || document.documentElement.scrollTop || 0;
 
@@ -27503,7 +27449,7 @@
 						{ id: 'mc_embed_signup' },
 						React.createElement(
 							'form',
-							{ action: '//siffx.us12.list-manage.com/subscribe/post?u=fcfebfed0a0e10f732ec35daa&id=c5b1f24a76', method: 'post', id: 'mc-embedded-subscribe-form', onChange: true, name: 'mc-embedded-subscribe-form', className: 'validate', target: '_blank', novalidate: true },
+							{ action: '//siffx.us12.list-manage.com/subscribe/post?u=fcfebfed0a0e10f732ec35daa&id=c5b1f24a76', method: 'post', id: 'mc-embedded-subscribe-form', name: 'mc-embedded-subscribe-form', className: 'validate', target: '_blank', novalidate: true },
 							React.createElement(
 								'div',
 								{ id: 'mc_embed_signup_scroll' },
@@ -27512,7 +27458,7 @@
 								React.createElement(
 									'div',
 									{ id: 'anti-bot-input', 'aria-hidden': 'true' },
-									React.createElement('input', { type: 'text', name: 'b_fcfebfed0a0e10f732ec35daa_c5b1f24a76', tabindex: '-1', value: '' })
+									React.createElement('input', { type: 'text', name: 'b_fcfebfed0a0e10f732ec35daa_c5b1f24a76', tabindex: '-1' })
 								),
 								React.createElement(
 									'div',
@@ -29015,67 +28961,9 @@
 
 /***/ },
 /* 271 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(272);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(267)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./entry.scss", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./entry.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 272 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(260)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "@font-face {\n  font-family: 'Futura';\n  src: url(" + __webpack_require__(273) + "?#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(274) + ") format(\"woff\"), url(" + __webpack_require__(275) + ") format(\"truetype\"); }\n\nbody {\n  font-family: 'Futura', Arial, sans-serif;\n  color: #F6ECDA;\n  font-weight: lighter;\n  max-width: 1400px; }\n\nhtml {\n  background: url(" + __webpack_require__(276) + ") no-repeat center center fixed;\n  -webkit-background-size: cover;\n  -moz-background-size: cover;\n  -o-background-size: cover;\n  background-size: cover; }\n\nmain {\n  text-align: center; }\n\nh1 {\n  font-size: 2.5em; }\n\nh2 {\n  font-size: 1.5em; }\n  @media screen and (max-width: 550px) {\n    h2 {\n      font-size: 1.25em; } }\n\np {\n  font-size: 1.25em;\n  font-weight: lighter;\n  color: #F6ECDA; }\n  @media screen and (max-width: 550px) {\n    p {\n      font-size: 1em; } }\n\nheader {\n  display: flex;\n  justify-content: center;\n  margin-top: 25px;\n  height: 25px;\n  text-align: center; }\n\n#logo {\n  background-image: url(" + __webpack_require__(238) + ") no-repeat;\n  display: inline-block;\n  width: 250px; }\n  @media screen and (max-width: 500px) {\n    #logo {\n      width: 150px; } }\n\n/*Buy Ticket Links and Badge*/\n#badgeContainer {\n  display: flex;\n  justify-content: flex-end; }\n\n#pass-img {\n  height: 60px;\n  width: 60px;\n  margin-right: 10px;\n  position: relative;\n  bottom: 10px; }\n\n/* Hero Img and logos for initial splash*/\n#hero {\n  text-align: center;\n  min-height: 500px; }\n\n#splash {\n  display: flex;\n  justify-content: space-between;\n  position: relative;\n  top: 40%;\n  -webkit-transform: translateY(-50%);\n  -ms-transform: translateY(-50%);\n  transform: translateY(-50%); }\n\n#main-logo {\n  height: 300px;\n  padding-right: 50px; }\n\n@media screen and (max-height: 600px) {\n  #hero {\n    margin-top: 40px; }\n  #main-logo {\n    height: 250px; } }\n\n#date {\n  height: 65px;\n  margin-top: 125px;\n  margin-left: 25px; }\n\n#location {\n  height: 125px;\n  margin-top: 100px;\n  margin-right: 25px; }\n\n@media screen and (max-width: 550px) {\n  #main-logo {\n    width: 225px;\n    padding-right: 0; }\n  #date {\n    margin-left: 15px; } }\n\n@media screen and (max-height: 450px) and (orientation: landscape) {\n  #main-logo {\n    height: 200px;\n    padding-right: 0px; }\n  #hero {\n    margin-top: 5%; }\n  #date {\n    height: 50px;\n    margin-top: 75px;\n    margin-left: 50px; }\n  #location {\n    height: 100px;\n    margin-top: 50px;\n    margin-right: 50px; } }\n\n.thirdCol {\n  width: 33%; }\n\n.halfCol {\n  width: 50%; }\n\n.quarterCol {\n  width: 25%; }\n\n@media screen and (max-width: 600px) {\n  .tablet-eighty-col {\n    width: 80%; }\n  .tablet-tenth-col {\n    width: 10%; } }\n\n.stack {\n  display: block; }\n\n.inline {\n  display: inline-block; }\n\n/*Scroll then fixed Nav Container for Desktop */\n#nav-container {\n  display: flex;\n  justify-content: space-between; }\n\n.nav-initial {\n  bottom: 0;\n  position: absolute; }\n\n.nav-basic {\n  height: 70px;\n  background-color: rgba(0, 0, 0, 0.75);\n  width: 100%; }\n\n.uppper {\n  position: relative;\n  top: 0; }\n\n#fixed-nav ul {\n  margin: 0;\n  padding: 0; }\n  #fixed-nav ul li {\n    display: inline-block;\n    height: 2em; }\n    #fixed-nav ul li:nth-child(n+2) {\n      margin-left: 15px; }\n      @media screen and (max-width: 750px) {\n        #fixed-nav ul li:nth-child(n+2) {\n          margin-left: 5px; } }\n      @media screen and (max-width: 650px) {\n        #fixed-nav ul li:nth-child(n+2) {\n          margin-left: 1px; } }\n      @media screen and (max-width: 665px) {\n        #fixed-nav ul li:nth-child(n+2) {\n          margin-top: 0px; } }\n    #fixed-nav ul li a {\n      text-decoration: none;\n      color: #F6ECDA;\n      padding: 5px;\n      font-weight: lighter;\n      font-size: 1.25em;\n      outline: 0; }\n      @media screen and (max-width: 850px) {\n        #fixed-nav ul li a {\n          font-size: 1em; } }\n\n@media screen and (max-width: 600px) {\n  .tablet-align-right {\n    text-align: right; } }\n\n.fixed-position {\n  position: fixed;\n  top: 0; }\n\n.dash {\n  display: inline-block; }\n\n#logo-nav {\n  background-image: url(" + __webpack_require__(238) + ") no-repeat;\n  display: inline-block;\n  width: 100%;\n  max-width: 250px;\n  margin-top: 15px;\n  min-height: 25px; }\n  @media screen and (max-width: 900px) {\n    #logo-nav {\n      width: 175px; } }\n  @media screen and (max-width: 800px) {\n    #logo-nav {\n      width: 150px; } }\n  @media screen and (max-width: 700px) {\n    #logo-nav {\n      width: 100%;\n      min-width: 100px; } }\n\n.img-nav {\n  visibility: hidden; }\n\n@media screen and (max-width: 550px) {\n  .tablet-display-none {\n    display: none !important; } }\n\n/*Buy Ticket Links and Badge*/\n#badgeContainer-nav {\n  display: flex;\n  justify-content: flex-end;\n  margin-top: 15px; }\n\n#pass-img-nav {\n  height: 60px;\n  width: 60px;\n  margin-right: 15px;\n  position: relative;\n  bottom: 10px; }\n\n/*h2 and p settings modified for screen size*/\n#infinite-scroll {\n  margin-top: 50px;\n  display: flex;\n  justify-content: space-around;\n  text-align: center; }\n  #infinite-scroll p {\n    margin: 20px 5% 100px 5%; }\n  @media screen and (max-width: 760px) {\n    #infinite-scroll h2 {\n      font-size: 2em; }\n    #infinite-scroll p {\n      font-size: 1.25em;\n      font-weight: lighter; } }\n  @media screen and (max-width: 425px) {\n    #infinite-scroll h2 {\n      font-size: 1.5em; }\n    #infinite-scroll p {\n      font-size: 1em;\n      font-weight: lighter; } }\n\n#program-highlights {\n  text-align: center;\n  margin-bottom: 50px; }\n  #program-highlights h1 {\n    color: #00F1AE; }\n  #program-highlights h2 {\n    font-size: 1.5em; }\n  #program-highlights p {\n    margin-bottom: 100px; }\n  #program-highlights a {\n    text-decoration: none;\n    color: #00F1AE;\n    font-size: 1.75em; }\n    #program-highlights a:hover {\n      color: #F6ECDA; }\n  #program-highlights img {\n    width: 100%; }\n\n#contact {\n  text-align: center;\n  height: 500px;\n  margin: 200px 0 50px 0; }\n\n/*Vr view styling*/\n#title {\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  user-select: none;\n  position: absolute;\n  top: 10%;\n  width: 100%;\n  font-size: 3em;\n  font-family: 'Dosis';\n  opacity: 1;\n  -webkit-transition: all 0.3s ease-in-out;\n  -moz-transition: all 0.3s ease-in-out;\n  transition: all 0.3s ease-in-out;\n  margin: 0 0.5rem; }\n\n#title.hidden {\n  opacity: 0; }\n\ncanvas {\n  cursor: -webkit-grab; }\n\ncanvas:active {\n  cursor: -webkit-grabbing; }\n\niframe {\n  border: 0; }\n\n/* MOBILE */\n@media screen and (max-width: 600px) {\n  iframe {\n    height: 240px; } }\n\n/* DESKTOP */\n@media screen and (min-width: 600px) {\n  iframe {\n    height: 400px;\n    margin: 1rem auto;\n    display: block;\n    width: 100%; } }\n\n/* Burger Menu Styles for Burger and Header */\n/*DESKTOP Header on burger off*/\n@media screen and (min-width: 1100px) {\n  .bm-burger-button {\n    display: none; } }\n\n/* General hamburger sidebar styles */\n.bm-menu {\n  background: white;\n  padding: 2.5em 1.5em 0;\n  font-size: 1.15em;\n  box-shadow: 10px 5px 5px black;\n  top: 0;\n  text-align: center; }\n\n.bm-menu-wrap {\n  width: 750px; }\n\n/* Color/shape of burger icon bars */\n.bm-burger-bars {\n  background: #373a47;\n  height: 5px; }\n\n.bm-burger-button {\n  position: absolute;\n  top: 20px;\n  right: 5%;\n  width: 10%;\n  max-width: 75px;\n  height: 50px; }\n\n.bm-burger-button:hover {\n  color: gray; }\n\n/* Styling of overlay */\n.bm-overlay {\n  background: rgba(0, 0, 0, 0.3);\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 1;\n  width: 100%;\n  height: 100%; }\n\n/* Position and sizing of clickable cross button */\n.bm-cross-button {\n  height: 24px;\n  width: 24px;\n  position: relative;\n  left: 10px;\n  cursor: pointer; }\n\n/* Color/shape of close button cross */\n.bm-cross {\n  background: black; }\n\n.bm-menu a {\n  color: black;\n  text-decoration: none;\n  font-size: 2em;\n  font-weight: bold;\n  margin-top: 60px;\n  letter-spacing: 10px; }\n\n.bm-menu a:hover {\n  color: gray; }\n\n.bm-menu a:focus {\n  color: gray; }\n\n@media screen and (max-width: 500px) {\n  .bm-menu a {\n    font-size: 1.25em;\n    letter-spacing: 5px; } }\n\n#anti-bot-input {\n  position: absolute;\n  left: -5000px; }\n\n#mce-EMAIL {\n  width: 100%;\n  background-color: #F6ECDA;\n  margin-bottom: 50px; }\n\n#mc-embedded-subscribe {\n  background-color: rgba(0, 0, 0, 0.2);\n  color: #F6ECDA;\n  border: 2px solid #F6ECDA;\n  width: 20%;\n  min-width: 150px;\n  cursor: pointer; }\n  #mc-embedded-subscribe:hover {\n    background-color: #00F1AE;\n    color: black;\n    border: 2px solid #00F1AE; }\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 273 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "4a37b2a3f3b6c0164dad116929c7a699.eot";
-
-/***/ },
-/* 274 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "eb7e1929c4c6ac65410b37380a5f02cb.woff";
-
-/***/ },
-/* 275 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "53b07ef968786f6f09d9330b627afb1e.ttf";
-
-/***/ },
-/* 276 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "319e6143d2d0ace8da69bb8963803a44.jpg";
+	// removed by extract-text-webpack-plugin
 
 /***/ }
 /******/ ]);

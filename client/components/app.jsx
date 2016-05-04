@@ -37,18 +37,6 @@ module.exports = React.createClass({
       viewportHeight = Math.max(window.innerHeight || 0),
       navOffsetTop = nav.offsetTop;
 
-		/*
-		*
-		* Just puttin all the CSS shit here because I don't know what convention is in REACT
-		* */
-      hero.style.height = viewportHeight + 'px';
-		hero.style.width = "100vw";
-
-
-		hero.parentNode.parentNode.parentNode.style.width = "100vw";
-		hero.parentNode.parentNode.parentNode.style.height = "1000px";
-
-
 
 		var hasScrolled = function() {
         var fromTop = document.body.scrollTop || document.documentElement.scrollTop || 0;
