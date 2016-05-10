@@ -12,7 +12,6 @@ module.exports = React.createClass({
 	render: function() {
 		return (
 			<section id="contact">
-				<a href="#contact"></a>
 				<h2>Contact</h2>
 				<p>
 					Want to keep up to date on exciting SIFF X news?<br />

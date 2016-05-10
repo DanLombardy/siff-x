@@ -1,6 +1,9 @@
 @font-face {
-  font-family: 'Futura';
-  src: url('./fonts/Futura-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('./fonts/Futura-Light.woff') format('woff'), /* Pretty Modern Browsers */
-       url('./fonts/Futura-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+  font-family: "Futura";
+  src: url("./fonts/FuturaLight.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+       url("./fonts/FuturaLight.woff") format("woff"), /* Pretty Modern Browsers */
+       url("./fonts/FuturaLight.ttf")  format("truetype"); /* Safari, Android, iOS */
 }
+
+
+@import url(https://fonts.googleapis.com/css?family=Nunito:400,300,700);

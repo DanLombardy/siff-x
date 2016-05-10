@@ -22,7 +22,6 @@ module.exports = React.createClass({
 		return (
 			<section id="program-highlights">
 
-				<a href="#top"></a>
 				<div className='quarterCol tablet-tenth-col inline'></div>
 				<div className='halfCol tablet-eighty-col inline'>
 					<h1>PROGRAM HIGHLIGHTS</h1>
@@ -102,8 +101,8 @@ module.exports = React.createClass({
 								Explore local, national, and international VR / AR projects that showcase a range
 								of new technologies and illustrate how artists are bending the tech to tell their
 								own stories. Featured projects with attending artists include: fabulous wonder.land,
-								a 4D VR take on Alice in Wonderland, created by Toby Coffee of the UK National
-								Theater; The Visitor, a VR house of mirrors created by filmmakers James Kaelen and
+								a 4D VR take on Alice in Wonderland, created by Toby Coffey of the National
+								Theatre of Great Britain; The Visitor, a VR house of mirrors created by filmmakers James Kaelen and
 								Eve M. Cohen; and Giant, a VR memoir of sorts in which director Milica Zec captures
 								the experience of growing up in a war zone.
 							</p>

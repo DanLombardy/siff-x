@@ -7,7 +7,6 @@ const Contact = require(__dirname + '/components/contact');
 const InfiniteScroll = require(__dirname + '/components/infinite-scroll');
 const ProgramHighlights = require(__dirname + '/components/program-highlights');
 
-require('font-awesome/css/font-awesome.css')
 require('normalize-css');
 require(__dirname + "/sass/entry.scss");
 
