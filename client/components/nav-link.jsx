@@ -5,12 +5,15 @@ module.exports = React.createClass({
 
 	render: function() {
 		function scrollToLink(el){
-			var newScrollHeight = document.body.scrollHeight-600;
+			var newScrollHeight = document.body.scrollHeight;
 			if(el.props.children=="program highlights"){
 					window.scrollTo(0, newScrollHeight);
+			} else if(el.props.children=="vrlog") {
+					window.scrollTo(0,document.body.scrollHeight);
+
 			} else if(el.props.children=="contact") {
 					window.scrollTo(0,document.body.scrollHeight);
-			}
+			} 
 		}
 		scrollToLink(this);
 		return (

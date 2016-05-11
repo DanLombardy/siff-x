@@ -4,8 +4,8 @@ const { IndexLink, Link } = require ('react-router');
 
 
 
-const Artists = require(__dirname + '/artists');
 const NavLink = require(__dirname + '/nav-link');
+
 
 //Header Images
 const logo = document.createElement('img');
@@ -70,7 +70,7 @@ module.exports = React.createClass({
 		return (
 			<section className="app">
 				<header>
-					<div className="thirdCol"></div>
+					<div className="thirdCol"><p id="date-place">June 2-5, 2016 <br /> Seattle Center</p></div>
 					<div className="thirdCol">
 						<img id="logo" src={logo.src } />
 					</div>
@@ -89,6 +89,7 @@ module.exports = React.createClass({
 						</div>
 						<div>
 							<img id="main-logo" src={ mainLogo.src }/>
+
 						</div>
 						<div>
 							<img id="location" src={ locationImg.src } />
@@ -102,10 +103,14 @@ module.exports = React.createClass({
 						<div className='halfCol tablet-eighty-col'>
 							<nav id="fixed-nav">
 								<ul>
-									<li><NavLink to="/program-highlights#top">program highlights</NavLink></li>
+									<li><NavLink to="/">vrlog</NavLink></li>
+									<li><p className="dash">-</p></li>
+
+									<li><NavLink to="/program-highlights">program highlights</NavLink></li>
 
 									<li><p className="dash">-</p></li>
-									<li><NavLink to="/contact#top">contact</NavLink></li>
+									<li><NavLink to="/contact">contact</NavLink></li>
+
 								</ul>
 							</nav>
 						</div>

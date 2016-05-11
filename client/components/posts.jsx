@@ -7,9 +7,7 @@ module.exports = React.createClass({
 		var postNodes = this.props.posts.map(function(post, i){
 			return (
 			<LazyLoad offsetVertical={1000} key={i}>
-				<div >
-					<div dangerouslySetInnerHTML={{__html: post.content}}/>
-				</div>
+					<div className="blog-post" dangerouslySetInnerHTML={{__html: post.content}}/>
 			</LazyLoad>
 
 			)

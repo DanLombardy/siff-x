@@ -1,0 +1,28 @@
+@import "modules/colors";
+
+#what-the-x {
+	text-align: center;
+	margin-top: 150px;
+	margin-bottom: 50px;
+	h1 {
+		color: $primary;
+	}
+	h2 {
+		font-size: 1.5em;
+	}
+	p {
+		margin-bottom: 100px;
+	}
+	a {
+		text-decoration: none;
+		color: $primary;
+		font-size: 1.75em;
+		&:hover {
+			color: $secondary;
+		}
+	}
+	img {
+		width: 100%;
+	}
+
+}

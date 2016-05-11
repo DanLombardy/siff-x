@@ -3,7 +3,7 @@
 const express = require('express');
 const jsonParser = require('body-parser');
 const handleError = require(__dirname + '/../server-lib/handle-error');
-const wordPressPosts = require(__dirname + "/../server-lib/wordpress-Posts.js")
+const wordPressPosts = require(__dirname + "/../server-lib/wordpress-posts.js")
 
 const dataRouter = module.exports = exports = express.Router();
 

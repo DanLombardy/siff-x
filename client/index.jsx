@@ -7,15 +7,14 @@ const Contact = require(__dirname + '/components/contact');
 const InfiniteScroll = require(__dirname + '/components/infinite-scroll');
 const ProgramHighlights = require(__dirname + '/components/program-highlights');
 
+
 require('normalize-css');
 require(__dirname + "/sass/entry.scss");
-
-
 
 render((
   <Router history={browserHistory}>
     <Route path="/" component={ App }>
-
+			<IndexRoute component={ InfiniteScroll }/>
 			<Route path="/program-highlights" component={ ProgramHighlights }/>
 			<Route path="/contact"  component={ Contact }/>
 
