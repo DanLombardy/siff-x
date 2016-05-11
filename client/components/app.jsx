@@ -103,7 +103,7 @@ module.exports = React.createClass({
 						<div className='halfCol tablet-eighty-col'>
 							<nav id="fixed-nav">
 								<ul>
-									<li><NavLink to="/">vrlog</NavLink></li>
+									<li><IndexLink activeStyle={{ color: '#00F1AE' }} to="/">VRog</IndexLink></li>
 									<li><p className="dash">-</p></li>
 
 									<li><NavLink to="/program-highlights">program highlights</NavLink></li>
