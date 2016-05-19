@@ -5,6 +5,7 @@ const { IndexLink, Link } = require ('react-router');
 
 
 const NavLink = require(__dirname + '/nav-link');
+const BurgerMenu = require(__dirname + '/burger-menu');
 
 
 //Header Images
@@ -75,10 +76,14 @@ module.exports = React.createClass({
 						<img id="logo" src={logo.src } />
 					</div>
 					<div className="thirdCol" id="badgeContainer">
+					{/*
 						<a href="http://myaccount.siff.net/shop/passes.aspx?PID=1464">
 							<img id="pass-img" src={buyPass.src} />
 						</a>
+						*/}
+						<BurgerMenu />
 					</div>
+
 
 			</header>
 			<main>
@@ -106,10 +111,16 @@ module.exports = React.createClass({
 									<li><IndexLink activeStyle={{ color: '#00F1AE' }} to="/">VRog</IndexLink></li>
 									<li><p className="dash">-</p></li>
 
-									<li><NavLink to="/program-highlights">program highlights</NavLink></li>
-
+									<li><NavLink to="/x-program">X Program</NavLink></li>
 									<li><p className="dash">-</p></li>
-									<li><NavLink to="/contact">contact</NavLink></li>
+
+									<li><NavLink to="/schedule">Schedule</NavLink></li>
+									<li><p className="dash">-</p></li>
+
+									<li><NavLink to="/what-the-x">What The X?</NavLink></li>
+									<li><p className="dash">-</p></li>
+
+									<li><NavLink to="/contact">Contact</NavLink></li>
 
 								</ul>
 							</nav>
