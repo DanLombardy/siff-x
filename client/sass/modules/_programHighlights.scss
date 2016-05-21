@@ -11,7 +11,7 @@
 		font-size: 1.5em;
 	}
 	p {
-		margin-bottom: 100px;
+		margin: 20px 5% 25px 5%;
 	}
 	a {
 		text-decoration: none;
@@ -24,5 +24,39 @@
 	img {
 		width: 100%;
 	}
+	.time-align-right{
+	text-align: right;
+	}
+	button {
+		background-color: rgba(0, 0, 0, .75);
+		border: 1px solid #F6ECDA;
+	  outline: 0;
+	}
+	.event-type {
+		background-color: rgba(0, 0, 0, .75);
+		color: $primary;
+		font-size: 2em;
+		padding: 10px;
+	}
+	@media screen and (max-width: 760px) {
+		h2 {
+			font-size: 2em;
+		}
 
+		p {
+			font-size: 1.25em;
+			font-weight:lighter;
+		}
+	}
+
+	@media screen and (max-width: 425px) {
+		h2 {
+			font-size: 1.5em;
+
+		}
+
+		p {
+			font-size: 1em;
+		}
+	}
 }

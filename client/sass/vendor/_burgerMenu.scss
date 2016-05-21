@@ -1,5 +1,6 @@
 /* Burger Menu Styles for Burger and Header */
 /*DESKTOP Header on burger off*/
+@import "modules/colors";
 
 @media screen and (min-width: 1100px) {
 	.bm-burger-button {
@@ -9,12 +10,13 @@
 
 /* General hamburger sidebar styles */
 .bm-menu {
-  background: white;
+  background: rgba(0, 0, 0, .75);
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 	box-shadow: 10px 5px 5px black;
 	top: 0;
 	text-align: center;
+	color: $secondary;
 }
 
 .bm-menu-wrap{
@@ -23,7 +25,7 @@
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #373a47;
+  background: $secondary;
 	height: 5px;
 }
 
@@ -37,7 +39,7 @@
 }
 
 .bm-burger-button:hover {
-  color: gray;
+  color: $primary;
 
 }
 
@@ -59,22 +61,24 @@
 	position: relative;
 	left: 10px;
 	cursor: pointer;
+	color: $secondary;
 }
 
 /* Color/shape of close button cross */
 .bm-cross {
-  background: black;
+  background: $secondary;
 
 }
 
 
 .bm-menu a{
-    color: black;
+    color: $secondary;
 		text-decoration: none;
 		font-size: 2em;
 		font-weight: bold;
-		margin-top: 60px;
+		margin-top: 25px;
 		letter-spacing: 10px;
+		outline: 0;
 }
 
 .bm-menu a:hover {
@@ -85,7 +89,10 @@
 	color: gray;
 }
 
-
+.menu-item {
+	display: block;
+	outline: 0;
+}
 
 @media screen and (max-width: 500px) {
 	.bm-menu a{

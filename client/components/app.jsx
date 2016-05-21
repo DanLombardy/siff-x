@@ -1,10 +1,12 @@
 const React = require('react');
 const request = require('superagent');
 const { IndexLink, Link } = require ('react-router');
+const MediaQuery = require('react-responsive');
 
 
 
 const NavLink = require(__dirname + '/nav-link');
+const BurgerMenu = require(__dirname + '/burger-menu');
 
 
 //Header Images
@@ -75,10 +77,14 @@ module.exports = React.createClass({
 						<img id="logo" src={logo.src } />
 					</div>
 					<div className="thirdCol" id="badgeContainer">
+					{/*
 						<a href="http://myaccount.siff.net/shop/passes.aspx?PID=1464">
 							<img id="pass-img" src={buyPass.src} />
 						</a>
+						*/}
+						<BurgerMenu />
 					</div>
+
 
 			</header>
 			<main>
@@ -95,7 +101,7 @@ module.exports = React.createClass({
 							<img id="location" src={ locationImg.src } />
 						</div>
 					</div>
-
+				<MediaQuery query='(min-width: 900px)'>
 					<section id="nav-container" className='nav-basic nav-initial'>
 						<div className='quarterCol tablet-tenth-col'>
 							<img id="logo-nav" className='img-nav' src={logo.src } />
@@ -106,10 +112,16 @@ module.exports = React.createClass({
 									<li><IndexLink activeStyle={{ color: '#00F1AE' }} to="/">VRog</IndexLink></li>
 									<li><p className="dash">-</p></li>
 
-									<li><NavLink to="/program-highlights">program highlights</NavLink></li>
-
+									<li><NavLink to="/x-program">X Program</NavLink></li>
 									<li><p className="dash">-</p></li>
-									<li><NavLink to="/contact">contact</NavLink></li>
+
+									<li><NavLink to="/what-the-x">What The X?</NavLink></li>
+									<li><p className="dash">-</p></li>
+
+									<li><NavLink to="/sponsors">Sponsors</NavLink></li>
+									<li><p className="dash">-</p></li>
+
+									<li><NavLink to="/contact">Contact</NavLink></li>
 
 								</ul>
 							</nav>
@@ -122,6 +134,8 @@ module.exports = React.createClass({
 
 
 					</section>
+				</MediaQuery>
+
 				</section>
 			</main>
 			{this.props.children}
