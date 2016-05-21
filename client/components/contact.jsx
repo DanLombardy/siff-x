@@ -27,6 +27,8 @@ module.exports = React.createClass({
 								<input type="email" value="" name="EMAIL" className="email" id="mce-EMAIL" placeholder="please enter your email address" onChange= { this.handleChange } value={this.state.value} required/>
 								<div id='anti-bot-input' aria-hidden="true"><input type="text" name="b_fcfebfed0a0e10f732ec35daa_c5b1f24a76" tabindex="-1" /></div>
 								<div><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" className="button"/></div>
+								<p>Our offices can be reached at the below emails.</p>
+								<p>Press@siffx.net Contact@Siffx.net</p>
 							</div>
 						</form>
 					</div>

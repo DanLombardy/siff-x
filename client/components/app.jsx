@@ -1,6 +1,7 @@
 const React = require('react');
 const request = require('superagent');
 const { IndexLink, Link } = require ('react-router');
+const MediaQuery = require('react-responsive');
 
 
 
@@ -100,7 +101,7 @@ module.exports = React.createClass({
 							<img id="location" src={ locationImg.src } />
 						</div>
 					</div>
-
+				<MediaQuery query='(min-width: 900px)'>
 					<section id="nav-container" className='nav-basic nav-initial'>
 						<div className='quarterCol tablet-tenth-col'>
 							<img id="logo-nav" className='img-nav' src={logo.src } />
@@ -114,10 +115,10 @@ module.exports = React.createClass({
 									<li><NavLink to="/x-program">X Program</NavLink></li>
 									<li><p className="dash">-</p></li>
 
-									<li><NavLink to="/schedule">Schedule</NavLink></li>
+									<li><NavLink to="/what-the-x">What The X?</NavLink></li>
 									<li><p className="dash">-</p></li>
 
-									<li><NavLink to="/what-the-x">What The X?</NavLink></li>
+									<li><NavLink to="/sponsors">Sponsors</NavLink></li>
 									<li><p className="dash">-</p></li>
 
 									<li><NavLink to="/contact">Contact</NavLink></li>
@@ -133,6 +134,8 @@ module.exports = React.createClass({
 
 
 					</section>
+				</MediaQuery>
+
 				</section>
 			</main>
 			{this.props.children}
