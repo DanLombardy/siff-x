@@ -9,7 +9,13 @@
 		margin: 20px 5% 25px 5%;
 	}
 
-	
+	a {
+		text-decoration: none;
+		color: $primary;
+		&hover {
+			color: $secondary;
+		}
+	}
 
 	.blog-post {
 		margin-bottom: 100px;
